@@ -11,16 +11,16 @@ public class AccountCreationPage {
 		PageFactory.initElements(d, this);
 	}
 	
-	@FindBy(id="gender_2")
+	@FindBy(id="id=id_gender2")
 	WebElement titleMrs;
 	
-	@FindBy(id="gender_1")
+	@FindBy(id="id_gender1")
 	WebElement titleMr;
 	
-	@FindBy(id="custormer_firstname")
+	@FindBy(name="customer_firstname")
 	WebElement  custormerFirstName;
 	
-	@FindBy(id="custormer_lastname")
+	@FindBy(name="customer_lastname")
 	WebElement customerLastName;
 	
 	@FindBy(id="email")
@@ -143,7 +143,7 @@ public class AccountCreationPage {
 	//state is the webElement(look above findBy)
 	//stateName is name of country that u want to pass to the method	
 	public void selectState(String stateName) {
-		Select obj = new Select(city);
+		Select obj = new Select(state);
 		obj.selectByVisibleText(stateName);
 	}
 	
